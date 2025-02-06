@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shop1.css">
+    <title>Документация CSS</title>
+</head>
+<body>
+    <header>
+        <h1>Справочник.ру</h1>
+        <a href="/directory/" class="back-button">Назад</a>
+    </header>
+    
+    <main>
+        <h2>CSS</h2>
+        <p>CSS (Cascading Style Sheets — каскадные таблицы стилей) — это язык, используемый для описания внешнего вида документа, написанного с использованием HTML или XML. CSS позволяет задавать стили элементов, такие как цвет, размер, отступы, расположение и анимации.</p>
+
+        <nav>
+            <ul>
+                <li><a href="#start">Как подключать CSS</a></li>
+                <li><a href="#selectors">Основные селекторы</a></li>
+                <li><a href="#properties">Основные свойства</a></li>
+                <li><a href="#units">Единицы измерения</a></li>
+                <li><a href="#flexbox">Flexbox</a></li>
+                <li><a href="#grid">Grid</a></li>
+                <li><a href="#animations">Анимации</a></li>
+                <li><a href="#sources">Лучшие источники</a></li>
+            </ul>
+        </nav>
+
+        <section id="start">
+            <h3>Как подключать CSS:</h3>
+            <pre><code>
+/* Внешний файл */
+&lt;link rel="stylesheet" href="style.css"&gt;
+
+/* Внутри тега &lt;style&gt; */
+&lt;style&gt;
+body { background-color: lightgray; }
+&lt;/style&gt;
+
+/* Прямо в атрибуте style */
+&lt;p style="color: red;"&gt;Красный текст&lt;/p&gt;
+            </code></pre>
+        </section>
+
+        <section id="selectors">
+            <h3>Основные селекторы CSS:</h3>
+            <ul>
+                <li><b>По тегу:</b> `p { color: blue; }`</li>
+                <li><b>По классу:</b> `.my-class { font-size: 20px; }`</li>
+            </ul>
+        </section>
+
+        <section id="properties">
+            <h3>Основные свойства CSS:</h3>
+            <ul>
+                <li><b>Цвет:</b> `color: red;`</li>
+                <li><b>Фон:</b> `background-color: yellow;`</li>
+                <li><b>Шрифт:</b> `font-size: 16px;`</li>
+                <li><b>Отступы:</b> `margin: 10px; padding: 5px;`</li>
+            </ul>
+        </section>
+
+        <section id="units">
+            <h3>Единицы измерения в CSS:</h3>
+            <ul>
+                <li><b>Абсолютные:</b> px, cm, mm</li>
+                <li><b>Относительные:</b> %, em, rem, vw, vh</li>
+            </ul>
+        </section>
+
+        <section id="flexbox">
+            <h3>Flexbox:</h3>
+            <pre><code>
+display: flex;
+justify-content: center;
+align-items: center;
+            </code></pre>
+        </section>
+
+        <section id="grid">
+            <h3>CSS Grid:</h3>
+            <pre><code>
+display: grid;
+grid-template-columns: 1fr 2fr;
+            </code></pre>
+        </section>
+
+        <section id="animations">
+            <h3>Анимации в CSS:</h3>
+            <pre><code>
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fade 2s ease-in-out;
+}
+            </code></pre>
+        </section>
+
+        <section id="sources">
+            <h3>Лучшие источники для изучения CSS:</h3>
+            <ul>
+                <li><a href="https://developer.mozilla.org/ru/docs/Web/CSS">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/css/">W3Schools</a></li>
+                <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
+                <li><a href="https://flexboxfroggy.com/">Flexbox Froggy (игра для изучения Flexbox)</a></li>
+                <li><a href="https://gridbyexample.com/">Grid by Example</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#top" id="scrollTopBtn">🔝 Наверх</a>
+    </footer>
+</body>
+</html>

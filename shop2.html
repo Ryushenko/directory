@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">    
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shop2.css">
+    <title>Справочник HTML</title>
+</head>
+<body>
+    <header>
+        <div class="block-logo">
+            <h1 class="logo">Справочник.ру</h1>
+        </div>
+        <a id="back" href="/directory/" class="Main-screen">
+            <h1 class="df"><strong>Назад</strong></h1>
+        </a>
+        <h1 class="html"><strong>HTML</strong></h1>
+        <p>
+            HTML (от англ. HyperText Markup Language — «язык гипертекстовой разметки») — стандартизированный язык гипертекстовой разметки документов для просмотра веб-страниц в браузере...
+        </p>
+    </header>
+
+    <main>
+        <nav>
+            <h2 class="dop">Что ты хочешь узнать?</h2>
+            <ul>
+                <li><a href="#start">Как начинать HTML документ</a></li>
+                <li>
+                    <div class="dropdown">
+                        <a href="#" class="button_html">Какие синтаксисы существуют в HTML</a>
+                        <div class="dropdown-options">
+                            <a href="#tegs">Тэги</a>
+                            <a href="#atribute">Атрибуты</a>
+                            <a href="#comment">Комментарии</a>
+                            <a href="#tag">Вложенность тегов</a>
+                            <a href="#doctype">DOCETYPE/Доктайп</a>
+                            <a href="#Semantix">Семантические и несемантические теги</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#Couching">Наилучшие источники изучения HTML</a></li>
+            </ul>
+        </nav>
+
+        <section id="start">
+            <strong>Начинать HTML-документ следует с базовой структуры, которая выглядит так:</strong> 
+            <pre><code class="code">
+                &lt;!DOCTYPE html&gt;
+                &lt;html lang="ru"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        &lt;title&gt;Мой первый HTML-документ&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                        &lt;h1&gt;Привет, мир!&lt;/h1&gt;
+                    &lt;/body&gt;
+                &lt;/html&gt;
+            </code></pre>
+            <strong>Почему именно так?</strong>
+            <ol>
+                <li>&lt;DOCTYPE html&gt; — объявляет тип документа как HTML5...</li>
+                <li>&lt;html lang="ru"&gt; — корневой элемент страницы...</li>
+                <li>&lt;head&gt; — содержит мета-информацию...</li>
+                <li>&lt;body&gt; — основное содержимое страницы...</li>
+            </ol>
+        </section>
+
+        <section id="tegs">
+            <h2><strong>Теги</strong></h2>
+            <p>Теги — это основные строительные блоки HTML. Они бывают двух типов:</p>
+            <ul>
+                <li><strong>Открывающие и закрывающие теги:</strong> &lt;h1&gt;Привет, мир!&lt;/h1&gt;</li>
+                <li><strong>Самозакрывающиеся теги:</strong> &lt;img src="image.jpg" alt="Картинка"&gt;</li>
+            </ul>
+            <pre><code class="code">
+                &lt;p&gt;Это абзац.&lt;/p&gt;
+                &lt;img src="logo.png" alt="Логотип"&gt;
+            </code></pre>
+        </section>
+
+        <section id="atribute">
+            <h2><strong>Атрибуты</strong></h2>
+            <p>Атрибуты добавляют дополнительную информацию к тегам. Атрибуты записываются внутри тега и состоят из имени и значения.</p>
+            <pre><code class="code">
+                &lt;a href="https://example.com" target="_blank"&gt;Ссылка&lt;/a&gt;
+                &lt;input type="text" placeholder="Введите имя"&gt;
+            </code></pre>
+            <h3>Основные атрибуты:</h3>
+            <ul>
+                <li><strong>id</strong> — уникальный идентификатор элемента.</li>
+                <li><strong>class</strong> — назначает элементу CSS класс.</li>
+                <li><strong>style</strong> — inline-стили.</li>
+                <li><strong>alt</strong> — альтернативный текст для изображений.</li>
+                <li><strong>title</strong> — всплывающая подсказка при наведении.</li>
+            </ul>
+        </section>
+
+        <section id="comment">
+            <h2><strong>Комментарии</strong></h2>
+            <p>Комментарии используются для пояснений в коде и не отображаются в браузере. Они помогают другим разработчикам или вам самим понимать, что происходит в коде.</p>
+            <pre><code class="code">
+                &lt;!-- Это комментарий --&gt;
+            </code></pre>
+        </section>
+
+        <section id="tag">
+            <h2><strong>Вложенность тегов</strong></h2>
+            <p>Очень важно правильно закрывать теги и соблюдать их вложенность. Некорректная вложенность может привести к неправильному отображению страницы.</p>
+            <h3>Правильно:</h3>
+            <pre><code class="code">
+                &lt;div&gt;
+                    &lt;p&gt;Текст в параграфе&lt;/p&gt;
+                &lt;/div&gt;
+            </code></pre>
+            <h3>Неправильно:</h3>
+            <pre><code class="code">
+                &lt;div&gt;
+                    &lt;p&gt;Текст в параграфе
+                &lt;/div&gt;
+            </code></pre>
+        </section>
+
+        <section id="doctype">
+            <h2><strong>DOCTYPE/Доктайп</strong></h2>
+            <p>DOCTYPE объявляет тип документа и его версию. Он всегда должен быть в начале HTML-документа.</p>
+            <pre><code class="code">
+                &lt;!DOCTYPE html&gt;
+            </code></pre>
+        </section>
+
+        <section id="Semantix">
+            <h2><strong>Семантические и несемантические теги</strong></h2>
+            <p>Семантические теги имеют конкретное значение для поисковых систем и помогают улучшить структуру страницы.</p>
+            <h3>Семантические теги:</h3>
+            <pre><code class="code">
+                &lt;header&gt;&lt;/header&gt;
+                &lt;nav&gt;&lt;/nav&gt;
+                &lt;article&gt;&lt;/article&gt;
+                &lt;section&gt;&lt;/section&gt;
+                &lt;footer&gt;&lt;/footer&gt;
+            </code></pre>
+            <h3>Несеамтические теги:</h3>
+            <pre><code class="code">
+                &lt;div class="header"&gt;&lt;/div&gt;
+                &lt;span class="menu"&gt;&lt;/span&gt;
+            </code></pre>
+        </section>
+
+        <section id="Couching">
+            <h2>Источники для изучения HTML</h2>
+            <h3>Официальные и документационные сайты:</h3>
+            <ul>
+                <li>✔️ <a href="https://developer.mozilla.org/ru/docs/Web/HTML" target="_blank">MDN Web Docs (Mozilla)</a> — Лучший справочник по HTML, примеры, объяснения.</li>
+                <li>✔️ <a href="https://www.w3schools.com/html/" target="_blank">W3Schools</a> — Интерактивные уроки, примеры, тесты.</li>
+                <li>✔️ <a href="https://html.spec.whatwg.org" target="_blank">HTML Living Standard (WHATWG)</a> — Официальный стандарт HTML.</li>
+            </ul>
+            
+            <h3>Курсы и обучающие платформы:</h3>
+            <ul>
+                <li>🔹 <a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a> — Интерактивные тренажёры по HTML и веб-разработке.</li>
+                <li>🔹 <a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a> — Практические проекты по HTML, CSS, JavaScript.</li>
+                <li>🔹 <a href="https://www.coursera.org/learn/html-css-javascript-for-web-developers" target="_blank">Coursera: HTML, CSS, JavaScript for Web Developers</a> — Онлайн-курс от университета Джона Хопкинса.</li>
+            </ul>
+
+            <h3>Практические платформы:</h3>
+            <ul>
+                <li>🔹 <a href="https://codepen.io/" target="_blank">CodePen</a> — Онлайн-песочница для HTML, CSS, JS, где можно писать код и мгновенно видеть результаты.</li>
+                <li>🔹 <a href="https://jsfiddle.net/" target="_blank">JSFiddle</a> — Простая тестовая среда для экспериментов с HTML, CSS, JS.</li>
+                <li>🔹 <a href="https://leetcode.com/problemset/all/" target="_blank">LeetCode</a> — Задачи по веб-разработке и алгоритмам.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#top" id="scrollTopBtn">🔝 Наверх</a>
+    </footer>
+</body>
+</html>
